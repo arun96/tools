@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# project 2
+# tf_mnist
+
+#
+# Fill in the empty line below with the command or commands that run your
+# program.
+#
+#   If you are having difficulty getting the script to run your program, talk
+# to the TAs.
+##############################################################################
+python NN.py
+##############################################################################
+# Run this script with the command
+#
+#   ./tf_mnist 
+
+

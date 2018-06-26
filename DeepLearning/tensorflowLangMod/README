@@ -1,0 +1,6 @@
+Notes:
+On the development data, my model achieves a perplexity of 260-280.
+
+I am currently using an embed size of 30, a hidden layer of size 128, and a keep probability of 0.85. The embed and hidden layer sizes were the initial values I decided on, and as the perplexity was low enough, I left them as is. The keep probability was determined through trial and error - I noticed that my model performed best with a probability of 1.0, but I wanted to prevent overfitting, so I tried 0.5, 0.75, and finally 0.85 (which gave me the best results).
+
+There are no bugs to report.

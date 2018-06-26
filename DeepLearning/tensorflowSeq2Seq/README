@@ -1,0 +1,15 @@
+Notes:
+There are 4 files - the two scripts for running the models, the vanilla model (seq2seq.py) and the pseudo-attention model (seq2seq_attn.py).
+
+I am using the following parameters:
+- epochs: 1 (as specified)
+- batch size: 20 (as specified)
+- learning rate: 1e-3 (determined using trial and error)
+- hidden size: 256 (determined using trial and error)
+- "window size": 13 (as specified)
+- embed size: 30 (determined using trial and error)
+- keep probability: 0.5 (determined using trial and error)
+
+My models currently achieve a per-symbol accuracy of around 70%, and attention seems to make very little difference.
+
+There are no bugs to report.

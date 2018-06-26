@@ -1,0 +1,17 @@
+Notes:
+On the development data, my recurrent neural net language model achieves a perplexity of 170-200.
+
+I am currently using the following parameters:
+
+- embed size = 100
+- RNN size = 256
+- window size = 20
+- batch size = 50
+- learning rate = 1e-3
+- epochs = 1
+
+The last four are according to the assignment specifications, while the first two were determined using trial and error. I found that an RNN size of 256 was much better than a size of 256, but not significantly better than 512. I started with an embed size of 30, but upped it to 75, and then to 100, and left it there as I saw an increase in performance.
+
+I am currently not using any dropout, as adding the dropout did not seem to help performance.
+
+There are no bugs to report.

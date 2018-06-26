@@ -1,0 +1,8 @@
+Notes:
+My neural net gets an accuracy of ~ 0.97 on the testing data. I added a hidden layer of size 256, am using a learning rate of 0.5, and have a batch size of 100. I am currently running 2000 iterations during train (i.e. getting 2000 batches of size 100 from the training data).
+
+My code is largely based on the tutorial on the Tensorflow website (that the lab linked to), with a single layer added, and the parameters slightly tweaked.
+
+I first implemented the second hidden layer of size 10, but the results were awful. I then stepped it up to 16, then 32, then 64. When I got to 128, the results were much better, but they seemed to peak at 256 (didn't find the step up to 512 to be significant). I started with a learning rate of 0.5, and as my accuracy was already well over the 92% requirement, I decided to leave it at that. Finally, I left the batch size as 100 (as it is in the tutorial), but tested and found 2000 iterations performed about 1% better than 1000 iterations.
+
+My code does not take in any parameters - instead, it looks for a folder called "MNIST_data" to get the four input files. If the folder cannot be found, the program instead downloads the files, and creates such a folder.

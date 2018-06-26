@@ -1,0 +1,19 @@
+This is an implementation of reinforcement learning, in the cartpole game.
+
+Notes:
+I am using the following parameters:
+- trials: 3 (as specified)
+- episodes per trial: 1000 (as specified)
+- moves: 999 (as specified)
+- discount factor (gamma): 0.9999 (as specified)
+- learning rate: 0.005 (as specified)
+- layer size: 32
+
+The layer size was determined using trial-and-error (the other values I tried were 8, 10, 12, 16, 24, 48 and 64).
+
+The code for initializing the TF graph is taken directly from the textbook, while the policy gradient training is based entirely on the pseudocode from the textbook.
+
+The rendering call is commented out, but is located on line 82.
+
+Bugs:
+None that I know of.

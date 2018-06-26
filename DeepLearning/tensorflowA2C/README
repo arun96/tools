@@ -1,0 +1,19 @@
+An implementation of A2C in the cartpole game.
+
+Notes:
+I am using the following parameters:
+- trials: 3 (as specified)
+- episodes per trial: 1000 (as specified)
+- moves: 999 (as specified)
+- discount factor (gamma): 0.99 (as specified)
+- learning rate: 0.001 (as specified)
+- hidden layer size: 32
+- critic layer size: 128
+- updates: every 50 steps (as specified)
+
+The layer sizes were determined through trial-and-error. I used a size of 32 for the hidden layer (as I did for the previous assignment), and I tried four other values (16, 32, 64, 100) before settling on 128 as the size for the critic layer.
+
+The code for initializing the TF graph is taken directly from the textbook (from both the previous section and the A2C section), while the policy gradient training is based entirely on the pseudocode from the textbook for the REINFORCE algorithm, as well as the later descriptions of A2C.
+
+Bugs:
+None that I know of.
