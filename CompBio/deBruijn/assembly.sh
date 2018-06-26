@@ -1,0 +1,1 @@
+/usr/bin/python assembly.py ${1} ${2}

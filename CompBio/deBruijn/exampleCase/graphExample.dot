@@ -1,0 +1,8 @@
+digraph G {
+	CTAC -> TACTGC [ label="CTACTGC" ];
+	TGCT -> GCTA [ label="TGCTA" ];
+	GCTA -> CTAC [ label="GCTAC" ];
+	GCTA -> CTATAC [ label="GCTATAC" ];
+	CTATAC -> TACTGC [ label="CTATACTGC" ];
+	ATCGCT -> GCTA [ label="ATCGCTA" ];
+}

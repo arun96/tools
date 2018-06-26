@@ -1,0 +1,13 @@
+De Bruijn Graph Construction
+
+Relevant Files:
+assembly.py, assembly.sh
+
+Running the code:
+sh assembly.sh <reads file> <graph filename>
+
+Overview:
+My implementation first reads in the reads file, and then creates the edges and nodes (edges are k-mers, where k is the length of a read, and the nodes are k-1 mers). I use 4 dictionaries to represent the graph - one to store outgoing edges for each node, one to store incoming edges for each node, one to store which node each edge is from, and one to store which node each edge is going to. I populate these dictionaries, and write a preliminary, unsimplified version of the dot file.
+My implementation then begins simplifying the graph. It does so by identifying three types of nodes that can be collapsed/combined, and then has a specific method for collapsing each. These types of nodes are sources, sinks, and nodes with one incoming and one outgoing edge - for each type, there are a specific set of steps to be taken to update the relevant lists and dictionaries, and create the appropriate labels for the new combined node and new edges.
+My implementation will continue to attempt to collapse the graph until it the graph can be simplified no more (i.e. no nodes are removed). At this point, it writes the final version of the graph to the dot file.
+To find the paths through the graph, my implementation first finds all sources and sinks, and for each sink, finds all the paths to that sink from any source. To do this, I recursively implemented a path finding algorithm that traces back a path from a sink to a source, and builds up the appropriate path by concatenating the labels on edges. I then store all possible paths, and select the longest ones to return. These are then sorted alphabetically, and returned.
